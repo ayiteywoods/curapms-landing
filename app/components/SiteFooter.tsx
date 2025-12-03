@@ -53,7 +53,7 @@ export function SiteFooter() {
       <div className="mx-auto w-full max-w-6xl px-6 py-14 lg:px-0">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1.1fr_0.9fr_1.2fr]">
           <div>
-            <p className="text-sm font-semibold text-[#a9d2ff]">Features</p>
+            <p className="text-lg font-semibold text-[#a9d2ff]">Features</p>
             <ul className="mt-5 space-y-2 text-sm leading-relaxed text-[#d9ecff]">
               {footerColumns.features.map((item) => (
                 <li key={item.label}>
@@ -69,7 +69,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-[#a9d2ff]">
+            <p className="text-lg font-semibold text-[#a9d2ff]">
               Property Types
             </p>
             <ul className="mt-5 space-y-2 text-sm leading-relaxed text-[#d9ecff]">
@@ -87,7 +87,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-[#a9d2ff]">
+            <p className="text-lg font-semibold text-[#a9d2ff]">
               CuraPMS
             </p>
             <ul className="mt-5 space-y-2 text-sm leading-relaxed text-[#d9ecff]">
@@ -105,7 +105,7 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-6">
-            <p className="text-sm font-semibold text-[#a9d2ff]">
+            <p className=" font-semibold text-[#a9d2ff]">
               Hello, we are CuraPMS.
             </p>
             <p className="text-sm leading-relaxed text-[#d9ecff]">
