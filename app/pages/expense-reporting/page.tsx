@@ -151,7 +151,7 @@ export default function ExpenseReportingPage() {
               <button className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50">
                 Edit Budget
               </button>
-              <p className="text-4xl font-bold text-slate-900">GHS 3400.00</p>
+              <p className="text-4xl font-bold text-slate-900">GHS 3,400.00</p>
             </div>
 
             {/* Available Budget Card */}
@@ -159,7 +159,7 @@ export default function ExpenseReportingPage() {
               <p className="mb-2 text-xs font-medium text-red-700">
                 Available Budget
               </p>
-              <p className="text-3xl font-bold text-red-900">GHS 1300.00</p>
+              <p className="text-3xl font-bold text-red-900">GHS 1,300.00</p>
             </div>
 
             {/* Monthly Expenses Card */}
@@ -330,12 +330,12 @@ export default function ExpenseReportingPage() {
             <div className="space-y-3">
             <div className="rounded-2xl bg-indigo-400 px-6 py-4">
                 <p className="text-sm font-medium text-white">
-                  Total Expenses <span className="font-bold">GHS 120, 400</span>
+                  Total Expenses <span className="font-bold">GHS 120,400.00</span>
                 </p>
               </div>
               <div className="rounded-2xl bg-green-700 px-6 py-4">
                 <p className="text-sm font-medium text-white">
-                  Total Profit <span className="font-bold">GHS 10, 400</span>
+                  Total Profit <span className="font-bold">GHS 10,400.00</span>
                 </p>
               </div>
             </div>

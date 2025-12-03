@@ -329,7 +329,7 @@ export default function LeaseSigningPage() {
                       ✓
                     </div>
                     <p className="text-lg font-bold text-slate-900">
-                      GHS 500
+                      GHS 500.00
                     </p>
                     <p className="mt-1 text-sm font-medium text-slate-700">
                       Payment Received

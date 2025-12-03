@@ -91,7 +91,7 @@ export default function MobileAppPage() {
 
               <div className="rounded-[16px] bg-[#f4f7fb] px-4 py-3 text-xs text-slate-500">
                 <p className="font-semibold text-slate-700">Processing</p>
-                <p>Your payment of GHS 500 is processing</p>
+                <p>Your payment of GHS 500.00 is processing</p>
               </div>
 
               <div className="mt-5 rounded-[16px] border border-slate-100 px-4 py-3 text-sm">
@@ -121,7 +121,7 @@ export default function MobileAppPage() {
                   House Rent
                 </p>
                 <p className="text-[11px] text-slate-500">
-                  Total amount payable <span className="font-semibold">GHS 500</span>
+                  Total amount payable <span className="font-semibold">GHS 500.00</span>
                 </p>
               </div>
               <span className="text-[11px] font-semibold text-emerald-500">

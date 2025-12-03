@@ -95,7 +95,7 @@ export default function DigitalRentPaymentPage() {
                       <div className="relative">
                         <div className="rounded-lg bg-indigo-100 px-8 py-5 shadow-lg">
                           <p className="text-base font-medium text-slate-400">Rent Reminder</p>
-                          <p className="text-3xl font-bold text-slate-900">$ 1200.00</p>
+                          <p className="text-3xl font-bold text-slate-900">GHS 1,200.00</p>
                         </div>
                         {/* Profile Picture - Overlapping bottom right corner */}
                         <div className="absolute -bottom-2 -right-2 h-20 w-20 overflow-hidden rounded-full border-2 border-white shadow-md">

@@ -61,26 +61,26 @@ export default function OnlineRentPaymentsPage() {
                 <p className="text-sm font-semibold text-slate-900">
                   Today&apos;s Payments
                 </p>
-                <span className="text-xs text-emerald-500">₵ 4,800 collected</span>
+                <span className="text-xs text-emerald-500">₵ 4,800.00 collected</span>
               </header>
               <div className="space-y-3 text-sm text-slate-700">
                 {[
                   {
                     name: "Kwame Boateng",
                     unit: "House No 40",
-                    amount: "GHS 500",
+                    amount: "GHS 500.00",
                     status: "Processing",
                   },
                   {
                     name: "Abeni Lawson",
                     unit: "2‑Bedroom Apartment",
-                    amount: "GHS 1,200",
+                    amount: "GHS 1,200.00",
                     status: "Paid",
                   },
                   {
                     name: "Daniel Mensah",
                     unit: "Studio",
-                    amount: "GHS 800",
+                    amount: "GHS 800.00",
                     status: "Due in 3 days",
                   },
                 ].map((payment) => (
@@ -175,7 +175,7 @@ export default function OnlineRentPaymentsPage() {
             <pre className="whitespace-pre-wrap font-mono text-[11px] text-slate-100">
               {`{
   "event": "payment.succeeded",
-  "amount": 50000,
+  "amount": 50,000.00,
   "currency": "GHS",
   "tenant": "Kwame Boateng",
   "unit": "House No 40"

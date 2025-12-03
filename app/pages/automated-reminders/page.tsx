@@ -1,7 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarDaysIcon, DocumentTextIcon } from "@heroicons/react/24/outline";
+import {
+  CalendarDaysIcon,
+  DocumentTextIcon,
+} from "@heroicons/react/24/outline";
 import { TestimonialsSection } from "@/app/components/sections/TestimonialsSection";
 import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
@@ -28,7 +31,9 @@ export default function AutomatedRemindersPage() {
           {/* Left Side - Text Content */}
           <div
             ref={section1Left.elementRef as React.RefObject<HTMLDivElement>}
-            className={`space-y-6 ${section1Left.isVisible ? "animate-slide-in-left" : "opacity-0"}`}
+            className={`space-y-6 ${
+              section1Left.isVisible ? "animate-slide-in-left" : "opacity-0"
+            }`}
           >
             {/* Headline */}
             <h1 className="text-4xl font-bold leading-tight text-slate-900 lg:text-5xl">
@@ -37,14 +42,20 @@ export default function AutomatedRemindersPage() {
 
             {/* Paragraph */}
             <p className="text-lg leading-relaxed text-slate-600">
-              Student renters can be hard to hold accountable. Our system sends multiple reminders for due invoices, overdue payments, and late fees. You can even include parents in the reminder list. Future rental invoices cannot be paid until all prior invoices and late fees are settled.
+              Student renters can be hard to hold accountable. Our system sends
+              multiple reminders for due invoices, overdue payments, and late
+              fees. You can even include parents in the reminder list. Future
+              rental invoices cannot be paid until all prior invoices and late
+              fees are settled.
             </p>
           </div>
 
           {/* Right Side - Alarm Clock with Callout Boxes */}
           <div
             ref={section1Right.elementRef as React.RefObject<HTMLDivElement>}
-            className={`relative flex items-center justify-center ${section1Right.isVisible ? "animate-slide-in-right" : "opacity-0"}`}
+            className={`relative flex items-center justify-center ${
+              section1Right.isVisible ? "animate-slide-in-right" : "opacity-0"
+            }`}
             style={{ animationDelay: "0.2s" }}
           >
             <div className="relative h-[500px] w-full">
@@ -52,7 +63,10 @@ export default function AutomatedRemindersPage() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative h-[300px] w-[300px]">
                   {/* Concentric arcs */}
-                  <svg className="absolute inset-0 h-full w-full" viewBox="0 0 300 300">
+                  <svg
+                    className="absolute inset-0 h-full w-full"
+                    viewBox="0 0 300 300"
+                  >
                     <circle
                       cx="150"
                       cy="150"
@@ -72,7 +86,7 @@ export default function AutomatedRemindersPage() {
                       strokeDasharray="5,5"
                     />
                   </svg>
-                  
+
                   {/* Watch Image */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Image
@@ -90,9 +104,12 @@ export default function AutomatedRemindersPage() {
                 <div className="flex items-start gap-3">
                   <CalendarDaysIcon className="h-5 w-5 shrink-0 text-indigo-600" />
                   <div>
-                    <p className="text-sm font-semibold text-slate-900">Due Date</p>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Due Date
+                    </p>
                     <p className="text-xs text-slate-600">
-                      Your deadline for signing the lease doc is approaching fast.
+                      Your deadline for signing the lease doc is approaching
+                      fast.
                     </p>
                   </div>
                 </div>
@@ -103,7 +120,9 @@ export default function AutomatedRemindersPage() {
                 <div className="flex items-start gap-3">
                   <DocumentTextIcon className="h-5 w-5 shrink-0 text-indigo-600" />
                   <div>
-                    <p className="text-sm font-semibold text-slate-900">Invoice</p>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Invoice
+                    </p>
                     <p className="text-xs text-slate-600">
                       Nicholas made a payment of GHS 237.00 for invoice #109358.
                     </p>
@@ -116,8 +135,12 @@ export default function AutomatedRemindersPage() {
                 <div className="flex items-start gap-3">
                   <CalendarDaysIcon className="h-5 w-5 shrink-0 text-indigo-600" />
                   <div>
-                    <p className="text-sm font-semibold text-slate-900">Due Date</p>
-                    <p className="text-xs text-slate-600">GHS 2,000 payment is due.</p>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Due Date
+                    </p>
+                    <p className="text-xs text-slate-600">
+                      GHS 2,000 payment is due.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -132,11 +155,13 @@ export default function AutomatedRemindersPage() {
           {/* Left Side - Mobile Phone Illustration */}
           <div
             ref={section2Left.elementRef as React.RefObject<HTMLDivElement>}
-            className={`relative order-2 flex items-center justify-center lg:order-1 ${section2Left.isVisible ? "animate-slide-in-left" : "opacity-0"}`}
+            className={`relative order-2 flex items-center justify-center lg:order-1 ${
+              section2Left.isVisible ? "animate-slide-in-left" : "opacity-0"
+            }`}
           >
             <div className="relative h-[500px] w-full">
               <Image
-                src="/mobile.png"
+                src="/mobile1.png"
                 alt="Hand holding smartphone with payment confirmation"
                 fill
                 className="object-contain"
@@ -147,7 +172,9 @@ export default function AutomatedRemindersPage() {
           {/* Right Side - Text Content */}
           <div
             ref={section2Right.elementRef as React.RefObject<HTMLDivElement>}
-            className={`space-y-6 order-1 lg:order-2 ${section2Right.isVisible ? "animate-slide-in-right" : "opacity-0"}`}
+            className={`space-y-6 order-1 lg:order-2 ${
+              section2Right.isVisible ? "animate-slide-in-right" : "opacity-0"
+            }`}
             style={{ animationDelay: "0.2s" }}
           >
             {/* Headline */}
@@ -157,7 +184,10 @@ export default function AutomatedRemindersPage() {
 
             {/* Paragraph */}
             <p className="text-lg leading-relaxed text-slate-600">
-              Today's students are used to managing everything—food, transport, bills, groceries—via their phones. Handwritten checks for rent feel outdated and stressful. Switch to electronic payments and collect rent faster.
+              Today's students are used to managing everything—food, transport,
+              bills, groceries—via their phones. Handwritten checks for rent
+              feel outdated and stressful. Switch to electronic payments and
+              collect rent faster.
             </p>
           </div>
         </div>
@@ -169,7 +199,9 @@ export default function AutomatedRemindersPage() {
           {/* Left Side - Text Content */}
           <div
             ref={section3Left.elementRef as React.RefObject<HTMLDivElement>}
-            className={`space-y-6 ${section3Left.isVisible ? "animate-slide-in-left" : "opacity-0"}`}
+            className={`space-y-6 ${
+              section3Left.isVisible ? "animate-slide-in-left" : "opacity-0"
+            }`}
           >
             {/* Headline */}
             <h2 className="text-4xl font-bold leading-tight text-slate-900 lg:text-5xl">
@@ -178,14 +210,20 @@ export default function AutomatedRemindersPage() {
 
             {/* Paragraph */}
             <p className="text-lg leading-relaxed text-slate-600">
-              Tenants can instantly report maintenance problems using photos, videos, and clear descriptions directly from their phones. Property managers get all the details they need quickly, respond promptly, and can directly bill the tenant if they were responsible for the issue.
+              Tenants can instantly report maintenance problems using photos,
+              videos, and clear descriptions directly from their phones.
+              Property managers get all the details they need quickly, respond
+              promptly, and can directly bill the tenant if they were
+              responsible for the issue.
             </p>
           </div>
 
           {/* Right Side - Chat Interface */}
           <div
             ref={section3Right.elementRef as React.RefObject<HTMLDivElement>}
-            className={`relative flex items-center justify-center ${section3Right.isVisible ? "animate-slide-in-right" : "opacity-0"}`}
+            className={`relative flex items-center justify-center ${
+              section3Right.isVisible ? "animate-slide-in-right" : "opacity-0"
+            }`}
             style={{ animationDelay: "0.2s" }}
           >
             <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-lg">
@@ -200,7 +238,9 @@ export default function AutomatedRemindersPage() {
                   />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-900">from Jane Smith</p>
+                  <p className="text-sm font-semibold text-slate-900">
+                    from Jane Smith
+                  </p>
                 </div>
               </div>
 
@@ -230,4 +270,3 @@ export default function AutomatedRemindersPage() {
     </div>
   );
 }
-

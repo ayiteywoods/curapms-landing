@@ -214,7 +214,7 @@ export function HeroIntroSection() {
           style={{ transitionDelay: isVisible ? "0.1s" : "0s" }}
         >
           <p className="text-xs font-semibold text-slate-400">Income vs Expenses</p>
-          <div className="mt-3 flex gap-1.5">
+          <div className="mt-3 flex items-end gap-1.5">
             {Array.from({ length: 9 }).map((_, idx) => (
               <span
                 key={idx}
@@ -240,7 +240,7 @@ export function HeroIntroSection() {
           <p className="text-xs font-semibold text-slate-400">
             Monthly Property Performance
           </p>
-          <div className="mt-3 flex gap-1">
+          <div className="mt-3 flex items-end gap-1">
             {Array.from({ length: 10 }).map((_, idx) => (
               <span
                 key={idx}
