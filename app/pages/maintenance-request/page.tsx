@@ -273,7 +273,7 @@ export default function MaintenanceRequestPage() {
           {/* Right - Text */}
           <div
             ref={conversationRight.elementRef as React.RefObject<HTMLDivElement>}
-            className={`space-y-6 ${conversationRight.isVisible ? "animate-slide-in-right" : "opacity-0"}`}
+            className={`mt-16 sm:mt-24 lg:mt-32 space-y-6 ${conversationRight.isVisible ? "animate-slide-in-right" : "opacity-0"}`}
             style={{ animationDelay: "0.2s" }}
           >
             <h2 className="text-4xl font-bold text-slate-900">
