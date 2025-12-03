@@ -23,7 +23,9 @@ export const metadata: Metadata = {
   title: "CuraPMS - Property Management System",
   description: "Unified property ecosystem for managing properties efficiently",
   icons: {
-    icon: "/fav.png",
+    icon: [
+      { url: "/fav.png", type: "image/png" },
+    ],
     shortcut: "/fav.png",
     apple: "/fav.png",
   },
