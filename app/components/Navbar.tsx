@@ -332,7 +332,7 @@ export function Navbar() {
 
   return (
     <nav ref={navRef} className="sticky top-0 z-50 w-full bg-transparent py-4">
-    <div className="relative mx-auto flex w-full items-center justify-between rounded-tr-lg rounded-bl-lg bg-[#eef3fb] px-6 py-2 lg:max-w-6xl lg:px-8">
+    <div className="relative mx-auto flex w-full items-center justify-between rounded-tr-lg rounded-bl-lg bg-white/80 backdrop-blur-md border border-white/20 shadow-lg px-6 py-2 lg:max-w-6xl lg:px-8">
       {/* Logo container with fixed height and overflow handling */}
       <div className="relative flex h-12 w-38 items-center overflow-visible">
         <Link href="/" className="inline-flex items-center">

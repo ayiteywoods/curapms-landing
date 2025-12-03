@@ -10,6 +10,7 @@ const testimonials = [
     quote:
       "CuraPMS helps my team stay ahead of every task. Rent reminders and screening tools are exactly what we needed.",
     rating: 5,
+    image: "/t4.jpg",
   },
   {
     name: "Daniel Mensah",
@@ -17,6 +18,7 @@ const testimonials = [
     quote:
       "The automation lets us scale without hiring a huge back office. Tenants love the quick response time.",
     rating: 5,
+    image: "/t2.jpg",
   },
   {
     name: "Priscilla Owusu",
@@ -24,6 +26,7 @@ const testimonials = [
     quote:
       "Expenses, leases, and maintenance all in one place. I finally have visibility into performance.",
     rating: 5,
+    image: "/t3.jpg",
   },
   {
     name: "Kwame Boateng",
@@ -31,6 +34,7 @@ const testimonials = [
     quote:
       "The insight I get from CuraPMS has completely changed how I run my properties. I can see issues before they become problems.",
     rating: 5,
+    image: "/t1.jpg",
   },
 ];
 
@@ -134,7 +138,7 @@ export function TestimonialsSection() {
             >
               <div className="flex items-center gap-4">
                 <Image
-                  src="/testimonial.png"
+                  src={person.image}
                   alt={person.name}
                   width={80}
                   height={80}
