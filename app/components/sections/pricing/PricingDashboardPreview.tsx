@@ -1,18 +1,30 @@
 "use client";
 
+import Image from "next/image";
+
 export function PricingDashboardPreview() {
   return (
     <section className="space-y-10 rounded-[36px] bg-white px-6 py-16 ring-1 ring-slate-100 lg:px-14">
       <div className="text-center">
         <p className="text-3xl font-light text-slate-800">
-          Simple. Powerful. <span className="font-semibold text-[#2563eb]">Free.</span>
+          Simple. Powerful. <span className="font-semibold text-indigo-400">Free.</span>
         </p>
       </div>
 
       <div className="relative mx-auto max-w-5xl">
         <div className="rounded-[36px] border-[18px] border-[#d9dde3] bg-white px-10 pb-12 pt-10 shadow-[0_35px_90px_rgba(15,23,42,0.15)]">
           <header className="mb-5 flex items-center gap-3 text-2xl font-semibold text-slate-900">
-            <span className="text-[#27c88c]">LGO</span>
+            <span className=" pr-3">
+              <Image
+                          src="/acura1.png"
+                          alt="CuraPMS logo"
+                          width={50}
+                          height={20} 
+                          className="h-auto w-auto object-contain" // Added this
+                          style={{ transform: 'scale(1.2)', transformOrigin: 'left center' }} // Scale it up
+                          priority
+                        />
+            </span>
             <span>Dashboard</span>
           </header>
           <div className="flex gap-6">
@@ -99,9 +111,20 @@ export function PricingDashboardPreview() {
         </div>
 
         <div className="absolute right-0 top-10 flex h-[520px] w-64 flex-col rounded-[34px] border-[12px] border-[#d9dde3] bg-white px-5 pb-6 pt-8 shadow-[0_35px_70px_rgba(15,23,42,0.2)]">
-          <header className="mb-4 text-xl font-semibold text-slate-900">
-            <span className="text-[#27c88c]">LGO</span> Dashboard
-          </header>
+          <header className="mb-5 flex items-center gap-2 text-sm font-semibold">
+                      <span className="pr-2">
+                      <Image
+                                                  src="/acura1.png"
+                                                  alt="CuraPMS logo"
+                                                  width={50}
+                                                  height={20} 
+                                                  className="h-auto w-auto object-contain" // Added this
+                                                  style={{ transform: 'scale(1.2)', transformOrigin: 'left center' }} // Scale it up
+                                                  priority
+                                                />
+                      </span>
+                      <span className="text-lg text-slate-900">Dashboard</span>
+                    </header>
           <button className="mb-4 w-full rounded-tr-lg rounded-bl-lg bg-[#63d885] py-2 text-sm font-semibold text-white">
             Set up Auto Pay
           </button>

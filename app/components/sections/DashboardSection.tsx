@@ -70,7 +70,16 @@ export function DashboardSection() {
           style={{ animationDelay: isVisible ? "0.4s" : "0s" }}
         >
           <header className="mb-4 sm:mb-8 flex items-center gap-2 sm:gap-4 text-base sm:text-lg font-semibold">
-            <span className="text-2xl sm:text-3xl font-bold text-[#22b573]">LGO</span>
+            <span className="pr-3">
+              <Image
+                                        src="/acura1.png"
+                                        alt="CuraPMS logo"
+                                        width={50}
+                                        height={20} 
+                                        className="h-auto w-auto object-contain" // Added this
+                                        style={{ transform: 'scale(1.2)', transformOrigin: 'left center' }} // Scale it up
+                                        priority
+                                      /></span>
             <span className="text-xl sm:text-2xl text-slate-900">Dashboard</span>
           </header>
 
@@ -146,7 +155,17 @@ export function DashboardSection() {
           style={{ animationDelay: isVisible ? "0.6s" : "0s" }}
         >
           <header className="mb-5 flex items-center gap-2 text-sm font-semibold">
-            <span className="text-xl font-bold text-[#22b573]">LGO</span>
+            <span className="pr-2">
+            <Image
+                                        src="/acura1.png"
+                                        alt="CuraPMS logo"
+                                        width={50}
+                                        height={20} 
+                                        className="h-auto w-auto object-contain" // Added this
+                                        style={{ transform: 'scale(1.2)', transformOrigin: 'left center' }} // Scale it up
+                                        priority
+                                      />
+            </span>
             <span className="text-lg text-slate-900">Dashboard</span>
           </header>
 

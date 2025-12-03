@@ -49,7 +49,7 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="mt-12 bg-indigo-600 text-white">
+    <footer className="mt-12 bg-indigo-500 text-white">
       <div className="mx-auto w-full max-w-6xl px-6 py-14 lg:px-0">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1.1fr_0.9fr_1.2fr]">
           <div>
