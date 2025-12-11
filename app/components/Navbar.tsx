@@ -54,7 +54,7 @@ const menuConfig: Record<
   }
 > = {
   features: {
-    tabs: ["Landlord", "Tenant", "Agent"],
+    tabs: ["Landlord", "Tenant", "Agent", "Third-parties"],
     items: {
       Landlord: [
         {
@@ -62,12 +62,6 @@ const menuConfig: Record<
           description: "Collect rent online with reminders and receipts.",
           icon: CreditCardIcon,
           href: "/pages/digital-rent-payment",
-        },
-        {
-          title: "Online Rent Payments",
-          description: "Collect rent online with reminders and receipts.",
-          icon: CreditCardIcon,
-          href: "/pages/online-rent-payments",
         },
         {
           title: "Maintenance Request",
@@ -98,6 +92,18 @@ const menuConfig: Record<
           description: "Connect accounting, CRM, and custom tools.",
           icon: LinkIcon,
           href: "/pages/integrations-apis",
+        },
+        {
+          title: "Automated Reminders",
+          description: "Automated reminders for invoices and payments.",
+          icon: BellIcon,
+          href: "/pages/automated-reminders",
+        },
+        {
+          title: "Ease in Rent Collection",
+          description: "Collect rent without the hassle.",
+          icon: CreditCardIcon,
+          href: "/pages/ease-rent-collection",
         },
       ],
       Tenant: [
@@ -183,6 +189,56 @@ const menuConfig: Record<
           href: "/pages/forms-documents",
         },
       ],
+      "Third-parties": [
+        {
+          title: "Tradesmen/Tradeswomen",
+          description: "Connect with skilled professionals for property maintenance.",
+          icon: UsersIcon,
+          href: "/pages/tradesmen-tradeswomen",
+        },
+        {
+          title: "Maintenance Team",
+          description: "Manage and coordinate your maintenance workforce.",
+          icon: WrenchScrewdriverIcon,
+          href: "/pages/maintenance-team",
+        },
+        {
+          title: "Vendors & Suppliers",
+          description: "Manage suppliers and vendors for property materials and services.",
+          icon: TruckIcon,
+          href: "/pages/vendors-suppliers",
+        },
+        {
+          title: "Contractors",
+          description: "Coordinate construction and renovation contractors.",
+          icon: BuildingOfficeIcon,
+          href: "/pages/contractors",
+        },
+        {
+          title: "Property Inspectors",
+          description: "Schedule and manage property inspections.",
+          icon: ClipboardDocumentCheckIcon,
+          href: "/pages/property-inspectors",
+        },
+        {
+          title: "Legal Services",
+          description: "Connect with legal professionals for property matters.",
+          icon: BookOpenIcon,
+          href: "/pages/legal-services",
+        },
+        {
+          title: "Cleaning Services",
+          description: "Manage cleaning and janitorial service providers.",
+          icon: LightBulbIcon,
+          href: "/pages/cleaning-services",
+        },
+        {
+          title: "Security Services",
+          description: "Coordinate security personnel and surveillance services.",
+          icon: ShieldCheckIcon,
+          href: "/pages/security-services",
+        },
+      ],
     },
   },
   propertyTypes: {
@@ -200,18 +256,6 @@ const menuConfig: Record<
           description: "A smarter way to find a place to stay.",
           icon: HomeModernIcon,
           href: "/pages/airbnb",
-        },
-        {
-          title: "Automated Reminders",
-          description: "Automated reminders for invoices and payments.",
-          icon: BellIcon,
-          href: "/pages/automated-reminders",
-        },
-        {
-          title: "Ease in Rent Collection",
-          description: "Collect rent without the hassle.",
-          icon: CreditCardIcon,
-          href: "/pages/ease-rent-collection",
         },
         {
           title: "Apartments & Condos",
@@ -337,7 +381,7 @@ export function Navbar() {
       <div className="relative flex h-12 w-38 items-center overflow-visible">
         <Link href="/" className="inline-flex items-center">
           <Image
-            src="/acura1.png"
+            src="/logo.png"
             alt="CuraPMS logo"
             width={300}
             height={50} 
@@ -434,7 +478,7 @@ export function Navbar() {
                           }));
                         }
                       }}
-                      className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-black/90 hover:bg-slate-50"
+                      className="flex w-full items-center justify-between rounded-tr-lg rounded-bl-lg px-4 py-3 text-base font-medium text-black/90 hover:bg-slate-50"
                     >
                       {item.label}
                       <svg
@@ -454,32 +498,37 @@ export function Navbar() {
                       </svg>
                     </button>
                     {activeMenu === item.menuKey && (
-                      <div className="ml-4 space-y-2 border-l-2 border-slate-200 pl-4">
-                        {menuConfig[item.menuKey].tabs.map((tab) => (
-                          <button
-                            key={tab}
-                            type="button"
-                            onClick={() =>
-                              setActiveTab((prev) => ({ ...prev, [item.menuKey!]: tab }))
-                            }
-                            className={`block w-full rounded-lg px-4 py-2 text-left text-sm ${
-                              activeTab[item.menuKey] === tab
-                                ? "bg-indigo-50 text-indigo-600 font-semibold"
-                                : "text-slate-600 hover:bg-slate-50"
-                            }`}
-                          >
-                            {tab}
-                          </button>
-                        ))}
-                        <div className="mt-3 space-y-2">
+                      <div className="ml-4 mt-2 space-y-2 rounded-xl border-l-4 border-indigo-400 bg-indigo-50/50 pl-4 pr-2 py-3 shadow-sm">
+                        <div className="flex gap-2 overflow-x-auto pb-2">
+                          {menuConfig[item.menuKey].tabs.map((tab) => (
+                            <button
+                              key={tab}
+                              type="button"
+                              onClick={() =>
+                                setActiveTab((prev) => ({ ...prev, [item.menuKey!]: tab }))
+                              }
+                              className={`whitespace-nowrap rounded-tr-lg rounded-bl-lg px-4 py-2 text-sm font-medium transition-colors ${
+                                activeTab[item.menuKey] === tab
+                                  ? "bg-indigo-600 text-white font-semibold shadow-md"
+                                  : "bg-white text-slate-700 hover:bg-indigo-100 hover:text-indigo-700"
+                              }`}
+                            >
+                              {tab}
+                            </button>
+                          ))}
+                        </div>
+                        <div className="mt-4 space-y-2">
                           {menuConfig[item.menuKey].items[
-                            activeTab[item.menuKey] as keyof TabConfig
+                            (activeTab[item.menuKey] || menuConfig[item.menuKey].tabs[0]) as keyof TabConfig
                           ]?.map((menuItem) => (
                             <Link
                               key={menuItem.title}
                               href={menuItem.href || "#"}
-                              onClick={() => setMobileMenuOpen(false)}
-                              className="block rounded-lg px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"
+                              onClick={() => {
+                                setMobileMenuOpen(false);
+                                setActiveMenu(null);
+                              }}
+                              className="block rounded-tr-lg rounded-bl-lg bg-white px-4 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:bg-indigo-100 hover:text-indigo-700"
                             >
                               {menuItem.title}
                             </Link>
@@ -492,7 +541,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block rounded-lg px-4 py-3 text-base font-medium text-black/90 hover:bg-slate-50"
+                    className="block rounded-tr-lg rounded-bl-lg px-4 py-3 text-base font-medium text-black/90 hover:bg-slate-50"
                   >
                     {item.label}
                   </Link>

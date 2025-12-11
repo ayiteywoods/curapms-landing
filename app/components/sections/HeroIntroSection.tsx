@@ -8,6 +8,7 @@ import {
   BanknotesIcon,
   ShieldCheckIcon,
   ChartBarIcon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 
 const featurePills = [
@@ -169,13 +170,13 @@ export function HeroIntroSection() {
           }`}
           style={{ transitionDelay: isVisible ? "0.1s" : "0s" }}
         >
-          <label className="flex flex-1 items-center gap-3 rounded-full border border-slate-200 px-5 py-3 text-left text-sm text-slate-500">
-            <span className="text-base text-slate-400">Enter your email</span>
+          <label className="flex flex-1 items-center gap-3 rounded-lg border border-slate-200 px-5 py-3 text-left text-sm text-slate-500">
+            <EnvelopeIcon className="h-5 w-5 text-slate-400" />
             <input
               type="email"
               value={email || ""}
               onChange={(e) => setEmail(e.target.value || "")}
-              placeholder="you@email.com"
+              placeholder="Enter your Email"
               required
               className="flex-1 border-none bg-transparent text-sm text-slate-700 outline-none"
             />
@@ -320,9 +321,7 @@ export function HeroIntroSection() {
               className="h-8 w-8 rounded-full object-cover"
             />
           </div>
-          <div className="absolute -right-16 top-8 rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-slate-500 shadow-md">
-            Rent is Due
-          </div>
+          
         </div>
 
         <div

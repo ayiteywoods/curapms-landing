@@ -87,7 +87,7 @@ export default function MaintenanceRequestPage() {
                 ))}
               </div>
               <div className="flex gap-3">
-                <button className="flex-1 rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
+                <button className="flex-1 rounded-tr-lg rounded-bl-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
                   Cancel
                 </button>
               <button className="flex-1 rounded-tr-lg rounded-bl-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800">
@@ -176,7 +176,7 @@ export default function MaintenanceRequestPage() {
                   </div>
                 </div>
                 <div className="flex gap-3 pt-2">
-                  <button className="flex-1 rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
+                  <button className="flex-1 rounded-tr-lg rounded-bl-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
                     Cancel
                   </button>
                   <button className="flex-1 rounded-tr-lg rounded-bl-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800">

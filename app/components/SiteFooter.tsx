@@ -1,8 +1,8 @@
 "use client";
 
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 const footerColumns = {
   features: [
@@ -139,7 +139,7 @@ export function SiteFooter() {
             <div className="relative -mt-12 h-32 w-full overflow-visible">
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
-                  src="/acurawhite1.png"
+                  src="/logoWhite.png"
                   alt="CuraPMS white logo"
                   width={800}
                   height={320}
@@ -152,7 +152,7 @@ export function SiteFooter() {
         <div className="mt-10 pt-4 text-xs text-[#d9ecff]">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap gap-4">
-              <span>2025 CuraPMS | All rights reserved</span>
+              <span>© 2025 CuraPMS | All rights reserved</span>
               
             </div>
             <div className="flex items-center gap-4">

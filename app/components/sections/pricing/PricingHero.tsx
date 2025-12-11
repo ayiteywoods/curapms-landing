@@ -72,12 +72,14 @@ export function PricingHero() {
               plan.highlight ? "border-green-700" : "border-slate-100"
             }`}
           >
-            {plan.highlight && (
-              <span className="mb-4 inline-flex rounded-full bg-indigo-400 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
-                Recommended
-              </span>
-            )}
-            <p className="text-sm font-semibold text-slate-500">{plan.name}</p>
+            <div className="flex items-center justify-between">
+              <p className="text-sm font-semibold text-slate-500">{plan.name}</p>
+              {plan.highlight && (
+                <span className="inline-flex rounded-full bg-indigo-400 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                  Recommended
+                </span>
+              )}
+            </div>
             <p className="mt-2 text-3xl font-semibold text-slate-900">
               {plan.price}
             </p>
